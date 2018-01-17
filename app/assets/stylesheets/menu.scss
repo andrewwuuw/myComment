@@ -14,7 +14,7 @@ html#menupage, body#menupage{
     /*設定思源中文*/
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bold;
-    background-image: url(asset-path('page2_bg.jpg'));
+    background-image: url(page2_bg.jpg);
     background-size:cover;
 		background-attachment:fixed;
     margin:0;
@@ -44,7 +44,7 @@ div.header{
 }
 
 .content{
-	background-image: url(asset-path('menu2.png'));
+	background-image: url(menu2.png);
 	height: 500px;
 	max-width: 870px;
 	min-width: 870px;
