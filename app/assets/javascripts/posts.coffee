@@ -8,5 +8,3 @@ $ ->
 
   $(".go_comment_button").click ->
     $('html, body').animate {scrollTop: $('.comment_block').offset().top}, 500
-
-  $(".table#comment_table").tablepage $(".span#table_page"), 2
