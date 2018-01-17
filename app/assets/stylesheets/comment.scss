@@ -14,7 +14,7 @@ html#newpage, body#newpage{
     /*設定思源中文*/
     font-family: 'Noto Sans TC', sans-serif;
     font-weight: bold;
-    background-image: url(page2_bg.jpg);
+    background-image: url(asset-path('page2_bg.jpg'));
     background-size:cover;
 		background-attachment:fixed;
     margin:0;

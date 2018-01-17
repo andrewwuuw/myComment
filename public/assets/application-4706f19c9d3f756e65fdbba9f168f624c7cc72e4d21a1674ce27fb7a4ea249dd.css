@@ -8792,7 +8792,7 @@ html#newpage, body#newpage {
   /*設定思源中文*/
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
-  background-image: url(page2_bg.jpg);
+  background-image: url("/assets/page2_bg-2c39691d7e6a10ef1e7bb5cd0eceec88031fcf80aed38614f373d9d057b75a13.jpg");
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
@@ -9007,7 +9007,7 @@ html#menupage, body#menupage {
   /*設定思源中文*/
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
-  background-image: url(page2_bg.jpg);
+  background-image: url("/assets/page2_bg-2c39691d7e6a10ef1e7bb5cd0eceec88031fcf80aed38614f373d9d057b75a13.jpg");
   background-size: cover;
   background-attachment: fixed;
   margin: 0;
@@ -9041,7 +9041,7 @@ div.header {
 
 /* line 47, /Users/andre/Desktop/my_comment/app/assets/stylesheets/menu.scss */
 .content {
-  background-image: url(menu2.png);
+  background-image: url("/assets/menu2-18f113c9cefccc4c7b1b4dc15dcddde684b7d802ac98756487bf17b738282099.png");
   height: 500px;
   max-width: 870px;
   min-width: 870px;
@@ -9240,7 +9240,7 @@ html#indexpage, body#indexpage {
   /*設定思源中文*/
   font-family: 'Noto Sans TC', sans-serif;
   font-weight: bold;
-  background-image: url(index_background.jpg);
+  background-image: url("/assets/index_background-0083ada61b86a27404bee9d804e55bbc107248cd4384c5afa4284e4d42a2444d.jpg");
   background-attachment: fixed;
 }
 
