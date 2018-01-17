@@ -14,6 +14,7 @@
 //= require turbolinks
 //= require bootstrap/dropdown
 //= require jquery
+//= require jquery-ui
 //= require jquery.easing
 //= require bootstrap-sprockets
 //= require_tree .
