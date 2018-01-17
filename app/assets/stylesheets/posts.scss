@@ -1,0 +1,67 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@charset "utf-8";
+
+/*---------------------------*/
+/* 引用思源中文                */
+/*---------------------------*/
+@import url(http://fonts.googleapis.com/earlyaccess/notosanstc.css);
+
+
+/*---------------------------*/
+/* 定義網頁                   */
+/*---------------------------*/
+html#indexpage, body#indexpage{
+    /*設定思源中文*/
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+    background-image: url(index_background.jpg);
+    background-attachment:fixed;
+}
+
+a, a:visited, a:hover{
+  text-decoration: none;
+  color: white;
+}
+
+.userlink a{
+  text-decoration: underline;
+  color: rgb(82, 126, 194);
+}
+
+
+/*---------------------------*/
+/* title                     */
+/*---------------------------*/
+.title{
+  text-align: center;
+  color:#ffffff;
+  text-shadow: 1px 1px 6px #000000;
+  margin:auto;
+}
+
+.title .master_title{
+  height: 500px;
+  line-height: 500px;
+  font-size: 120px;
+  letter-spacing: 40px;
+  display:none;
+}
+
+.title .slave_title{
+  margin-top: 0;
+  font-size: 30px;
+  letter-spacing: 25px;
+  display:none;
+}
+
+.title .book_button{
+  width: 230px;
+  margin: 100px auto 0px auto;
+  padding: 3px;
+  border: 3px dashed white;
+  border-radius: 25px;
+  font-size: 50px;
+  display:none;
+}

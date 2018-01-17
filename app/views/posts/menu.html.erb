@@ -1,0 +1,155 @@
+<html id="menupage">
+  <head>
+    <meta charset="UTF-8">
+    <title>吟香小吃鋪_外帶預定</title>
+  </head>
+
+<body id="menupage">
+  <br><br><br>
+	<div class="contentleft">
+    <%= image_tag("dec02.png", id: "food01") %>
+    <%= image_tag("dec03.png", id: "food02") %>
+    <%= image_tag("dec04.png", id: "food03") %>
+	</div>
+
+	<div class="contentright">
+    <%= image_tag("dec01.png", id: "dec01") %>
+	</div>
+
+	<!--解除float-->
+	<div class="clear"></div>
+
+	<div class="content">
+    <h1>Menu</h1>
+
+    <div class="menutable">
+      <table ID="part1">
+
+          	<h5>湯麵</h5>
+          	<tr>
+           		<td>牛肉麵</td>
+           		<td>70元</td>
+           	</tr>
+           	<tr>
+           		<td>牛肉湯麵</td>
+           		<td>60元</td>
+           	</tr>
+            	<tr>
+           		<td>牛肉河粉</td>
+           		<td>70元</td>
+           	</tr>
+           	<tr>
+           		<td>雞絲麵</td>
+           		<td>60元</td>
+           	</tr>
+           	<tr>
+           		<td>雞絲河粉</td>
+           		<td>60元</td>
+           	</tr>
+           	<tr>
+           		<td>豬肉麵</td>
+           		<td>65元</td>
+           	</tr>
+  		</table>
+      <table ID="part2">
+           	<h5>乾麵</h5>
+           	<tr>
+           		<td>乾麵</td>
+           		<td>30元</td>
+           	</tr>
+           	<tr>
+           		<td>乾河粉</td>
+           		<td>30元</td>
+           	</tr>
+           	<tr>
+           		<td>豬肉涼麵</td>
+           		<td>60元</td>
+           	</tr>
+  		</table>
+      <table ID="part3">
+           	<h5 id="name3">飯類</h5>
+           	<tr>
+           		<td>咖喱飯</td>
+           		<td>60元</td>
+           	</tr>
+           	<tr>
+           		<td>滷肉飯(小)</td>
+           		<td>30元</td>
+           	</tr>
+           	<tr>
+           		<td>滷肉飯(大)</td>
+           		<td>35元</td>
+           	</tr>
+           	<tr>
+           		<td>雞肉飯(小)</td>
+           		<td>30元</td>
+           	</tr>
+           	<tr>
+           		<td>雞肉飯(大)</td>
+           		<td>35元</td>
+           	</tr>
+           	<tr>
+           		<td>滷雞肉飯(小)</td>
+           		<td>35元</td>
+           	</tr>
+           	<tr>
+           		<td>滷雞肉飯(大)</td>
+           		<td>40元</td>
+           	</tr>
+
+  	 	</table>
+      <table ID="part4">
+           	<h5 id="name4">湯品</h5>
+           	<tr>
+           		<td>魚丸湯</td>
+           		<td>25元</td>
+           	</tr>
+           	<tr>
+           		<td>牛肉湯</td>
+           		<td>60元</td>
+           	</tr>
+      </table>
+		</div>
+
+	</div>
+
+  <div class="go_comment_button">
+    點我到留言區
+  </div>
+
+  <div class="comment_block">
+    <table id="comment_table" class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>文章</th>
+          <th>留言者</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @posts.each do |post| %>
+        <tr>
+          <td>#</td>
+          <td><%= simple_format(post.content) %></td>
+
+          <% @users.each do |user| %>
+            <% if user.id == post.user_id %>
+              <td><%= user.name %></td>
+            <% end %>
+          <% end %>
+
+          <td>
+            <% if post.editable_by?(current_user) %>
+              <%= link_to("編輯", edit_post_path(post), class: "btn btn-danger btn-xs")%>
+              <%= link_to("刪除", post_path(post), class: "btn btn-danger btn-xs", method: "delete", data: { confirm: "你確定要刪除嗎？" } )%>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+  </table>
+  <%= link_to("新增留言", new_post_path, class: "btn btn-warning pull-right") %>
+  </div>
+
+</body>
+</html>
